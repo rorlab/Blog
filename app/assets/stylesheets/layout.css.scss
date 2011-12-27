@@ -1,41 +1,26 @@
-#container {
+#container{
+	width:$app_width;
+	margin:1em auto;
+	overflow:auto;
+	#header, #content, #footer {
+		float:left;
+		padding:5px;
 
-  overflow:auto;
-  width:806px;
-  margin:10px auto;
-
-  #header {
-    width:806px - 22px;
-    float:left;
-    border:1px solid gray;
-    @include border-radius(10px 10px 0 0);
-    padding:0px 10px;
-
-  }
-
-  #content {
-    width:806px - 20px - 2px;
-    float:left;
-    border:1px solid gray;
-    padding:10px;
-    #main {
-      float:left;
-      width:806px - 20px - 2px - 218px;
-    }
-    #sidebar {
-      float:left;
-      padding-left:10px;
-      width:208px;
-    }
-  }
-
-  #footer {
-    width:806px - 20px - 2px;
-    float:left;
-    text-align:center;
-    border:1px solid gray;
-    @include border-radius(0 0 10px 10px);
-    padding:10px;
-  }
-
+	}
+	#header {
+		@include border-radius(5px 5px 0 0);
+		border: 1px solid $border_color;
+		width:$app_width - 12px;
+		background-color: $fill_color;
+	}
+	#content{ 
+		width:$app_width - 10px;
+	}
+	#footer{
+		text-align:center;
+		@include border-radius(0 0 5px 5px);
+		border: 1px solid $border_color;
+		width:$app_width - 12px;
+		background-color: $fill_color;
+	}
 }

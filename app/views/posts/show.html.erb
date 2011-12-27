@@ -1,13 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<%= render @post %>
+<p>
+  <b>Name:</b>
+  <%= @post.name %>
+</p>
 
-<div class="comments">
-  <%= render @post.comments %>
-</div>
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @post.content %>
+</p>
+
+<%= @post.tags.map(&:name).join(', ') %>
+
+<%= render @post.comments %>
 
 <%= render "comments/form" %>
 
-<div class="page_nav">
-  <%= link_to 'Back', posts_path %>
-</div>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

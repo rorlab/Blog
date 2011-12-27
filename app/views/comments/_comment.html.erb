@@ -1,11 +1,6 @@
-<div class="comment">
-  <div class="created_at">
-    <%= comment.created_at.to_s(:db) %>
-  </div>
-  <div class="body">
-    <%= comment.body %>
-  </div>
-  <div class="actions">
-    <%= link_to "destroy", [comment.post, comment], :confirm => "정말로 삭제하시겠습니까?", :method => :delete %>
-  </div>
-</div>
+<p>
+  <%= comment.body + "(#{comment.created_at})" %>
+</p>
+<p>
+  <%= link_to "삭제", [comment.post, comment], :confirm => "정말로 삭제하시겠습니까?", :method => :delete %>
+</p>

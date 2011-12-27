@@ -5,7 +5,9 @@
  *= require_self
 */
 
-@import 'bourbon';
-@import 'scaffolds.css.scss';
-@import 'layout.css.scss';
-@import 'posts.css.scss';
+@import "bourbon";
+@import "global_consts.scss";
+@import "layout.css.scss";
+@import "scaffolds.css.scss";
+@import "posts.css.scss";
+@import "home.css.scss";
