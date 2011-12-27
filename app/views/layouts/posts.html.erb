@@ -1,0 +1,10 @@
+<%= content_for :posts do %>
+  <div id="main">
+    <%= yield %>
+  </div>
+  <div id="sidebar">
+    <%= render "layouts/sidebar" %>
+  </div>
+<% end %>
+
+<%= render :template => "layouts/application" %>

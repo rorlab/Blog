@@ -8,7 +8,17 @@
 </head>
 <body>
 
-<%= yield %>
+  <div id="container">
+    <div id="header">
+      <%= render "layouts/header" %>
+    </div>
+    <div id="content">
+      <%= content_for?(:posts) ? yield(:posts) : yield %>
+    </div>
+    <div id="footer">
+      <%= render "layouts/footer" %>
+    </div>
+  </div>
 
 </body>
 </html>
