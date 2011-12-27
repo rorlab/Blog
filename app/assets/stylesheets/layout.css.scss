@@ -8,10 +8,16 @@
 
 	}
 	#header {
-		@include border-radius(5px 5px 0 0);
-		border: 1px solid $border_color;
-		width:$app_width - 12px;
-		background-color: $fill_color;
+	  @include border-radius(5px 5px 0 0);
+	  border: 1px solid $border_color;
+	  width:$app_width - 12px;
+	  background-color: $fill_color;
+	  #title { 
+	    float:left;
+	  }
+	  #log_status{
+	    float:right;
+	  }
 	}
 	#content{ 
 		width:$app_width - 10px;
@@ -23,4 +29,35 @@
 		width:$app_width - 12px;
 		background-color: $fill_color;
 	}
+}
+
+#flash-banner {
+  //#notice-message, #alert-message,
+  .flash.notice, .flash.alert {
+    z-index: 999;
+    /*display:none;*/
+    position:fixed;
+    left:10px;
+    top:10px;
+    -moz-border-radius : 4px;
+    border-radius : 4px;
+    padding: 5px 8px;
+    margin: 0 auto 10px;
+
+    /* width: 492px; */
+    text-align:center;
+  }
+
+  //#notice-message,
+  .flash.notice {
+    background-color: #CFC;
+    border: solid 1px #6C6;
+  }
+
+
+  #alert-message,
+  .flash.alert {
+    background-color: #FCC;
+    border: solid 1px #C66;
+  }
 }

@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="flash-banner">
+	  <% flash.each do |key, msg| %>
+	    <%= content_tag :div, msg, :class => "flash " + key.to_s, :id => key.to_s + "-message" %>
+	    <%= content_tag :script, :type => "text/javascript" do %>
+	      $('#<%= key.to_s + "-message" %>').css('display', 'none');
+	      $('#<%= key.to_s + "-message" %>').slideDown().delay(1000).slideUp();
+	    <% end %>
+	  <% end %>
+	</div>	
 	<div id="container">
 		<div id="header">
 			<%= render "layouts/header" %>

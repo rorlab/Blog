@@ -1,1 +1,15 @@
+<div id="title">
 RailsGuide Blog, ROR Lab.
+</div>
+
+<div id="log_status">
+    <% if user_signed_in? %>
+        <%= link_to current_user.email, edit_user_registration_path(current_user) %>
+        |
+        <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+        <%= link_to "Register", new_user_registration_path %>
+        |
+        <%= link_to "Log in", new_user_session_path %>
+    <% end %>
+</div>
