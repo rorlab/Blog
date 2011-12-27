@@ -1,7 +1,82 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#comment_body {
-  height:3em;
-  width:300px;
+
+.post {
+  margin:5px 0;
+  border:1px solid gray;
+  @include border-radius(5px);
+  padding:5px 5px 0;
+  .title {
+    font-size:24px;
+    font-weight:bold;
+    color:red;
+    margin:10px 0 5px;
+  }
+  .post_info {
+    font-size:8px;
+    font-style:italic;
+  }
+  .content {
+    margin:10px 10px;
+
+  }
+  .tags {
+    font-size:10px;
+    color:gray;
+  }
+  .actions{
+    text-align:right;
+  }
+
+}
+
+.comments {
+  width:100%;
+  overflow:auto;
+  .comment {
+    float:right;
+    width:80%;
+    margin:5px 0;
+    .created_at {
+      border:1px solid gray;
+      @include border-radius(5px 5px 0 0);
+      background-color:lighten(gray, 30%);
+      padding:0 5px;
+    }
+    .body {
+      border:1px solid gray;
+      padding:5px;
+    }
+    .actions {
+      border:1px solid gray;
+      @include border-radius(0 0 5px 5px);
+      padding:0 5px;
+      text-align:right;
+      a {
+        text-decoration:none;
+      }
+    }
+  }
+}
+#new_post {
+  #post_name{}
+  #post_title{width:400px;}
+  #post_content{width:400px;height:10em;}
+}
+#new_comment {
+  float:right;
+  width:80%;
+  #comment_body {
+    height:3em;
+    width:446px;
+  }
+  .actions {
+    text-align:right;
+  }
+}
+.page_nav {
+  float:left;
+  width:100%;
+  border-top:1px dashed gray;
 }

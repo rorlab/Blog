@@ -1,5 +1,5 @@
 module PostsHelper
-  def list_tag(tags)
+  def tag_list(tags)
     tags.map(&:name).join(", ")
   end
 end

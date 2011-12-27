@@ -1,0 +1,22 @@
+<div class="post">
+  <div class="title">
+    <%= post.title %>
+  </div>
+  <div class="post_info">
+    <%= ": written by #{post.name} #{time_ago_in_words(post.created_at)} ago" %>
+  </div>
+  <div class="content">
+    <%= post.content %>
+  </div>
+  <% if post.tags.present? %>
+    <div class="tags">
+      <%= "Tags: " + tag_list(post.tags) %>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= link_to 'Show', post %> |
+    <%= link_to 'Edit', edit_post_path(post) %> |
+    <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %>
+  </div>
+</div>
+
