@@ -15,7 +15,7 @@
   <%= @post.content %>
 </p>
 
-<%= @post.tags.map(&:name).join(', ') %>
+<%= tag_list(@post.tags) %>
 
 <%= render @post.comments %>
 
