@@ -1,0 +1,6 @@
+<p>
+  <%= comment.body + "(#{comment.created_at})" %>
+</p>
+<p>
+  <%= link_to "삭제", [comment.post, comment], :confirm => "정말로 삭제하시겠습니까?", :method => :delete %>
+</p>
