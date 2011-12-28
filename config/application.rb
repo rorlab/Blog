@@ -52,8 +52,8 @@ module Blog
        :address => "smtp.gmail.com",
        :port => 587,
        :domain => 'wordstory.kr',
-       :user_name => 'your_account@gmail.com',
-       :password => 'your_password',
+       :user_name => 'xxxx@gmail.com',
+       :password => 'xxxx',
        :authentication => 'plain',
        :enable_starttls_auto => true
     }
